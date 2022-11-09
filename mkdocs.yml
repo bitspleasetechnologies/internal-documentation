@@ -1,6 +1,18 @@
-site_name: My Docs
+site_name: Bits Please Technologies N.V. - Dev Docs
 nav:
   - Home: index.md
   - Project Starters:
       - NextJS Starter: project-setup/next-starter.md
-theme: material
+theme:
+  name: material
+  logo: images/logo.png
+  features:
+    - content.code.annotate
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
