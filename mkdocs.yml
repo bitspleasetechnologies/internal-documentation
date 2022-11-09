@@ -1,0 +1,6 @@
+site_name: My Docs
+nav:
+  - Home: index.md
+  - Project Starters:
+      - NextJS Starter: project-setup/next-starter.md
+theme: material
