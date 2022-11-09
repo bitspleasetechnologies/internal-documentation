@@ -13,7 +13,7 @@
     
     
       
-        <title>NextJS Starter - My Docs</title>
+        <title>NextJS Starter - Bits Please Technologies N.V. - Dev Docs</title>
       
     
     
@@ -76,10 +76,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+    <a href="../.." title="Bits Please Technologies N.V. - Dev Docs" class="md-header__button md-logo" aria-label="Bits Please Technologies N.V. - Dev Docs" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../../images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -89,7 +88,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            My Docs
+            Bits Please Technologies N.V. - Dev Docs
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -162,13 +161,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+    <a href="../.." title="Bits Please Technologies N.V. - Dev Docs" class="md-nav__button md-logo" aria-label="Bits Please Technologies N.V. - Dev Docs" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../../images/logo.png" alt="logo">
 
     </a>
-    My Docs
+    Bits Please Technologies N.V. - Dev Docs
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -382,31 +380,79 @@
 
 
 <h1 id="nextjs-tailwind-typescript-setup-guide">Next.js, Tailwind &amp; Typescript Setup Guide.</h1>
+<div class="admonition warning">
+<p class="admonition-title">Using these command line tools requires eigher a unix based system or <a href="https://git-scm.com/download/win">git bash</a> on Windows.</p>
+</div>
 <p>This starter guide will help you set up your nextjs project with typescript and tailwind.</p>
+<p><img alt="Bits Please Logo" src="../../images/logo.png" /></p>
 <h2 id="installation">Installation</h2>
 <h3 id="next-setup">Next Setup</h3>
 <p>Create a new next project with the create-next-app script and yarn.</p>
 <blockquote>
 <p>while the <code>/app</code> folder is in beta.</p>
 </blockquote>
-<pre><code class="language-bash">  yarn create next-app my-project --ts --eslint --experimental-app
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  yarn create next-app my-project --ts --eslint --experimental-app
+</code></pre></div>
 <blockquote>
 <p>after the <code>/app</code> folder is out of beta.</p>
 </blockquote>
-<pre><code class="language-bash">  yarn create next-app my-project --ts --eslint
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>  yarn create next-app my-project --ts --eslint
+</code></pre></div>
 <p>After you've created your next project make a <code>src</code> folder in the root of your project.</p>
-<pre><code class="language-bash">mkdir src
-</code></pre>
-<p>Then move the <code>app, pages, public</code> folder into the <code>src</code> folder.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mkdir src
+</code></pre></div>
+<p>Then move the <code>app,pages</code> folders into the <code>src</code> folder.</p>
 <blockquote>
-<p>the <code>-t, --target-directory=DIRECTORY</code> flag for the <code>mv</code> command moves all SOURCE arguments into DIRECTORY </p>
+<p>the <code>-t, --target-directory=DIRECTORY</code> flag for the <code>mv</code> command moves all SOURCE arguments into DIRECTORY</p>
 </blockquote>
-<pre><code class="language-bash">mv -t src app pages public
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>mv -t src app pages
+</code></pre></div>
+<p>After you've moved these folders to the <code>src</code> folder root of your project. Navigate into the directory and create these folders and add placeholder files. <code>eg. hooks/hooks.placeholder</code></p>
+<blockquote>
+<p>We will remove the placeholder files when we start using the directories.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>src/
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>├─ config/
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>├─ hooks/
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>├─ interfaces/
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>├─ services/
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>├─ utils/
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">cd</span> src
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>mkdir config hooks interfaces services utils
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>touch config/congig.placeholder hooks/hooks.placeholder interfaces/interfaces.placeholder services/services.placeholder utils/utils.placeholder
+</code></pre></div>
 <h3 id="typescript-setup">Typescript Setup</h3>
 <h3 id="tailwind-setup">Tailwind Setup</h3>
+<div class="admonition note">
+<p class="admonition-title">By the time you're reading this the documentation of this section may have been changed. <a href="https://tailwindcss.com/docs/guides/nextjs">click here</a> to checkout the latest version.</p>
+</div>
+<p>Start by adding the tailwind dependencies and initialize the tailwind configuration.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>npm install -D tailwindcss postcss autoprefixer
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>npx tailwindcss init -p
+</code></pre></div>
+<p>Add the paths to all of your template files in your tailwind.config.js file.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="cm">/** @type {import(&#39;tailwindcss&#39;).Config} */</span><span class="w"></span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">  </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="s2">&quot;./app/**/*.{js,ts,jsx,tsx}&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="s2">&quot;./pages/**/*.{js,ts,jsx,tsx}&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="s2">&quot;./components/**/*.{js,ts,jsx,tsx}&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">  </span><span class="p">],</span><span class="w"></span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">  </span><span class="nx">theme</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="nx">extend</span><span class="o">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">  </span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">  </span><span class="nx">plugins</span><span class="o">:</span><span class="w"> </span><span class="p">[],</span><span class="w"></span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>Add the <code>@tailwind</code> directives for each of Tailwind’s layers to your <code>./styles/globals.css</code> file.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">@</span><span class="k">tailwind</span><span class="w"> </span><span class="nt">base</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="p">@</span><span class="k">tailwind</span><span class="w"> </span><span class="nt">components</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">@</span><span class="k">tailwind</span><span class="w"> </span><span class="nt">utilities</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Start your build process.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>yarn run dev
+</code></pre></div>
 
 
 
@@ -465,7 +511,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
