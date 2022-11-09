@@ -40,8 +40,6 @@ mv -t src app pages
 
 After you've moved these folders to the `src` folder root of your project. Navigate into the directory and create these folders and add placeholder files. `eg. hooks/hooks.placeholder`
 
-> We will remove the placeholder files when we start using the directories.
-
 ```
 src/
 ├─ config/
@@ -51,13 +49,44 @@ src/
 ├─ utils/
 ```
 
+> We will remove the placeholder files when we start using the directories.
+
 ```bash
+# naviagete to `src` directory
 cd src
+
+# make tconfig hooks interfaces services utils directories
 mkdir config hooks interfaces services utils
+
+# add placeholder files to directories
 touch config/congig.placeholder hooks/hooks.placeholder interfaces/interfaces.placeholder services/services.placeholder utils/utils.placeholder
 ```
 
 ### Typescript Setup
+
+Open your "tsconfig.json" file and add the following lines to your `compilerOptions` object:
+
+```json
+{
+  "compilerOptions": {
+    ...
+    "incremental": true,
+    /* --- start copy here --- */
+    "baseUrl": "src",
+    "paths": {
+      "@config/*": ["config/*"],
+      "@hooks/*": ["hooks/*"],
+      "@interfaces/*": ["components/*"],
+      "@services/*": ["services/*"],
+      "@styles/*": ["styles/*"],
+      "@images/*": ["assets/images/*"]
+    },
+    /* --- end copy here ---*/
+      "plugins": [...],
+  },
+  ...
+}
+```
 
 ### Tailwind Setup
 
@@ -66,19 +95,19 @@ touch config/congig.placeholder hooks/hooks.placeholder interfaces/interfaces.pl
 Start by adding the tailwind dependencies and initialize the tailwind configuration.
 
 ```bash
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
+yarn add -D tailwindcss postcss autoprefixer
+yarn tailwindcss init -p
 ```
 
-Add the paths to all of your template files in your tailwind.config.js file.
+Add the paths to all of your template files in your `tailwind.config.js` file.
 
 ```js
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    "./src/app/**/*.{js,ts,jsx,tsx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {},
@@ -87,12 +116,52 @@ module.exports = {
 };
 ```
 
-Add the `@tailwind` directives for each of Tailwind’s layers to your `./styles/globals.css` file.
+Add the `@tailwind` directives for each of Tailwind’s layers to your `app/globals.css` file.
 
 ```css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+```
+
+Configure your tailwind configuration to the needs of pojected templates
+
+```js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/app/**/*.{js,ts,jsx,tsx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}"
+    ]
+  theme: {
+    /* you can choose to override the default theme */
+    fontFamily: {
+      ...
+    },
+    fontSize: {
+     ...
+    },
+    /* or you can choose to extend the default theme */
+    extend: {
+      backgroundImage: {
+       ...
+      },
+      colors: {
+       ...
+      },
+      screens: {
+       ...
+      },
+      gridAutoColumns: {
+       ...
+      }
+    },
+  },
+  plugins: [],
+};
+
+
 ```
 
 Start your build process.
