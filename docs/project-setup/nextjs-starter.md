@@ -56,10 +56,10 @@ src/
 cd src
 
 # make tconfig hooks interfaces services utils directories
-mkdir config hooks interfaces services utils
+mkdir components config hooks interfaces services utils
 
 # add placeholder files to directories
-touch config/congig.placeholder hooks/hooks.placeholder interfaces/interfaces.placeholder services/services.placeholder utils/utils.placeholder
+touch components/components.placeholder config/config.placeholder hooks/hooks.placeholder interfaces/interfaces.placeholder services/services.placeholder utils/utils.placeholder
 ```
 
 ### Typescript Setup
@@ -74,6 +74,7 @@ Open your "tsconfig.json" file and add the following lines to your `compilerOpti
     /* --- start copy here --- */
     "baseUrl": "src",
     "paths": {
+      "@components/*": ["components/*"],
       "@config/*": ["config/*"],
       "@hooks/*": ["hooks/*"],
       "@interfaces/*": ["components/*"],
