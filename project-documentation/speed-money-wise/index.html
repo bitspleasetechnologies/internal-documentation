@@ -679,11 +679,11 @@
 <p>The company currently uses WhatsApp to keep track of transactions made which has proven to be very inefficient.</p>
 <p>The solution we shall provide is a web portal that allows the company to efficiently administrate its transactions and keep track of the customers involved in those transactions.</p>
 <p>Next to those core functionalities, the system will also have settings that allow the administrator <strong>(superuser)</strong> to input supporting data for the transaction creation process and to manage the access control of the users in the system.</p>
-<p><img alt="Figure 1: High-Level Overview Of Process Flow" src="/images/projects/speed-money-wise/Speed_Money_Wise_Flow.png" /></p>
+<p><img alt="Figure 1: High-Level Overview Of Process Flow" src="images/projects/speed-money-wise/Speed_Money_Wise_Flow.png" /></p>
 <p>Figure 1: High-Level Overview Of Process Flow</p>
 <h2 id="how-will-we-build-the-project">How will we build the project?</h2>
 <p>The infrastructure of this project is split into 2 parts, the frontend, and the backend.</p>
-<p><img alt="Figure 2: High-Level Overview Of Project Infrastructure." src="/images/projects/speed-money-wise/Speed_Money_Wise_Infra.png" /></p>
+<p><img alt="Figure 2: High-Level Overview Of Project Infrastructure." src="images/projects/speed-money-wise/Speed_Money_Wise_Infra.png" /></p>
 <p>Figure 2: High-Level Overview Of Project Infrastructure.</p>
 <h3 id="the-frontend">The Frontend</h3>
 <p>To build the frontend for this project we will be using the Typescript version of <a href="https://nextjs.org/blog/next-13">Next.js</a> 13 in combination with <a href="https://tailwindcss.com/">TailwindCSS</a>. Furthermore, we will be using various other packages to aid in certain aspects of the project.</p>
@@ -691,7 +691,7 @@
 <p>For the authentication part of our frontend application, we will utilize <a href="https://next-auth.js.org/">NextAuth</a> which provides us with an easy way to authenticate our users and maintain a user session across our application. The provider we’ll be using is the <a href="https://next-auth.js.org/providers/credentials"><code>CredentialsProvider</code></a>.</p>
 <p>The authentication system we will implement is a combination of access tokens and refresh tokens. The user will log into the system with their credentials and receive an access token and a refresh token.</p>
 <p>The access token will expire in a short amount of time which will cause the client to request a new token with the refresh token.</p>
-<p><img alt="Figure 3:  Authentication Process" src="/images/projects/speed-money-wise/Token_Authentication_Flow.png" /></p>
+<p><img alt="Figure 3:  Authentication Process" src="images/projects/speed-money-wise/Token_Authentication_Flow.png" /></p>
 <p>Figure 3: Authentication Process</p>
 <h4 id="authorization">Authorization</h4>
 <h4 id="user-interface">User Interface</h4>
