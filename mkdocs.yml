@@ -2,10 +2,25 @@ site_name: Bits Please Technologies N.V. - Dev Docs
 nav:
   - Home: index.md
   - Project Starters:
-      - NextJS Starter: project-setup/next-starter.md
+      - NextJS Starter: project-setup/nextjs-starter.md
+      - NestJS Starter: project-setup/nestjs-starter.md
+  - Project Documentation:
+    - Speed Money Wise: project-documentation/speed-money-wise/index.md
 theme:
   name: material
   logo: images/logo.png
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
   features:
     - content.code.annotate
 
