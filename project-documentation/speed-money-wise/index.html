@@ -694,6 +694,9 @@
 <p><img alt="Figure 3:  Authentication Process" src="../../images/projects/speed-money-wise/Token_Authentication_Flow.png" /></p>
 <p>Figure 3: Authentication Process</p>
 <h4 id="authorization">Authorization</h4>
+<div class="admonition note">
+<p class="admonition-title">There is a <a href="https://gist.github.com/N3RDCLASH/576d92a71d605b824b5ebbb4527bad09">usePermission hook example</a></p>
+</div>
 <h4 id="user-interface">User Interface</h4>
 <p>The user interface of this application will be styled with TailwindCSS. The project will consist of a combination of completely <strong>custom-built components</strong> and some <strong>pre-built functional components</strong> that will be styled using tailwind.</p>
 <p>The libraries we'll be using for the "headless" components are <a href="https://headlessui.com/">Headless UI</a> and <a href="https://tanstack.com/">Tanstack Table</a>.</p>
@@ -711,14 +714,11 @@
 <p>The sidebar component will be the main navigation component for this portal.</p>
 <p>The requirements for this component are:</p>
 <ul>
-<li>The componten should accept items prop in which a config array can be passed.</li>
+<li>The component should accept items prop in which a config array can be passed.</li>
 <li>The sidebar will generate its sidebar item based on the objects in the array.</li>
 <li>The sidebar will use a permissions hook to determine if the user has the permissions to visit that route and will render based on that condition.</li>
 </ul>
 <h6 id="client-form">Client Form</h6>
-<div class="admonition note">
-<p class="admonition-title">when adding a custom fee the selected fee_id should be null in the transactions body</p>
-</div>
 <p>The client form will be used to register client information. The form will be used 3 times in the application:</p>
 <ol>
 <li>To record sender information when registering a transaction.</li>
@@ -734,11 +734,14 @@
 <p>The table can be used to display various amounts of information. For the table component we will use Tanstack Tables so we don't have to implenent table functionility from scratch.</p>
 <h6 id="button">Button</h6>
 <h4 id="state-management">State Management</h4>
-<p>The state management solution we will be using is <a href="https://docs.pmnd.rs/zustand/getting-started/introduction">Zustand</a>. Zustand is very simple and straightforward state management solution.</p>
 <div class="admonition note">
-<p class="admonition-title">A helpful Zustand tutorial is <a href="https://www.youtube.com/watch?v=KCr-UNsM3vA">here</a>.</p>
+<p class="admonition-title">Check out a helpful Zustand tutorial <a href="https://www.youtube.com/watch?v=KCr-UNsM3vA">here</a>.</p>
 </div>
+<p>The state management solution we will be using is <a href="https://docs.pmnd.rs/zustand/getting-started/introduction">Zustand</a>. Zustand is very simple and straightforward state management solution.</p>
 <h3 id="the-backend">The Backend</h3>
+<div class="admonition note">
+<p class="admonition-title">when adding a custom fee the selected fee_id should be null in the transactions body</p>
+</div>
 <h4 id="authentication_1">Authentication</h4>
 <h4 id="authorization_1">Authorization</h4>
 <p>TODO: write these doc sections</p>
