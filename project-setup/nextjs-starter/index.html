@@ -621,14 +621,14 @@
                   
 
 
-<h1 id="nextjs-tailwind-typescript-setup-guide">Next.js, Tailwind &amp; Typescript Setup Guide.</h1>
+<h1 id="nextjs-tailwind-typescript-setup-guide">Next.js, Tailwind &amp; Typescript Setup Guide.<a class="headerlink" href="#nextjs-tailwind-typescript-setup-guide" title="Permanent link">&para;</a></h1>
 <div class="admonition warning">
 <p class="admonition-title">Using these command line tools requires either a unix based system or <a href="https://git-scm.com/download/win">git bash</a> on Windows.</p>
 </div>
 <p>This starter guide will help you set up your nextjs project with typescript and tailwind.</p>
 <p><img alt="Bits Please Logo" src="../../images/logo.png" /></p>
-<h2 id="installation">Installation</h2>
-<h3 id="next-setup">Next Setup</h3>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<h3 id="next-setup">Next Setup<a class="headerlink" href="#next-setup" title="Permanent link">&para;</a></h3>
 <p>Create a new next project with the create-next-app script and yarn.</p>
 <blockquote>
 <p>while the <code>/app</code> directory is in beta.</p>
@@ -670,7 +670,7 @@
 <a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="c1"># add placeholder files to directories</span>
 <a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>touch components/components.placeholder config/config.placeholder hooks/hooks.placeholder interfaces/interfaces.placeholder services/services.placeholder utils/utils.placeholder
 </code></pre></div>
-<h3 id="typescript-setup">Typescript Setup</h3>
+<h3 id="typescript-setup">Typescript Setup<a class="headerlink" href="#typescript-setup" title="Permanent link">&para;</a></h3>
 <p>Open your "tsconfig.json" file and add the following lines to your <code>compilerOptions</code> object:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">{</span><span class="w"></span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="nt">&quot;compilerOptions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -693,7 +693,7 @@
 <a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="w">  </span><span class="err">...</span><span class="w"></span>
 <a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<h3 id="tailwind-setup">Tailwind Setup</h3>
+<h3 id="tailwind-setup">Tailwind Setup<a class="headerlink" href="#tailwind-setup" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
 <p class="admonition-title">By the time you're reading this the documentation of this section may have been changed. <a href="https://tailwindcss.com/docs/guides/nextjs">click here</a> to checkout the latest version.</p>
 </div>
@@ -758,9 +758,9 @@
 <p>Start your build process.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>yarn run dev
 </code></pre></div>
-<h2 id="structure">Structure</h2>
+<h2 id="structure">Structure<a class="headerlink" href="#structure" title="Permanent link">&para;</a></h2>
 <p>In this chapter we'll be discussing the directory structure and code archictecture will be using in our <code>Next.js</code> projects.</p>
-<h3 id="directory-structure">Directory Structure</h3>
+<h3 id="directory-structure">Directory Structure<a class="headerlink" href="#directory-structure" title="Permanent link">&para;</a></h3>
 <p>As an extension on the default Next.js directory structure we decided to place our directories in a <code>src</code> directory. This is to have a dedicated space where our code lives away from all the different project configuration files.</p>
 <p>The structure of our <code>src</code> directory is as follows:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>src/
@@ -772,7 +772,7 @@
 <a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>├─ services/
 <a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>├─ utils/
 </code></pre></div>
-<h4 id="app-directory">App Directory</h4>
+<h4 id="app-directory">App Directory<a class="headerlink" href="#app-directory" title="Permanent link">&para;</a></h4>
 <p>Since the launch of Next 13 the <code>app</code> directory replaces the <code>pages</code> directory as the directory that handles the layouts and client-side routing.
 All components in the <code>app</code> directory are <em>Server Components</em> by default.</p>
 <p>To use <em>Client Components</em> inside the <code>app</code> directory have to use the <code>"use client"</code> directive at the top of our file.</p>
@@ -780,7 +780,7 @@ All components in the <code>app</code> directory are <em>Server Components</em> 
 
 </pre>
 
-<h4 id="components-directory">Components Directory</h4>
+<h4 id="components-directory">Components Directory<a class="headerlink" href="#components-directory" title="Permanent link">&para;</a></h4>
 <p>In contrary to the <code>app</code> directory, the <code>components</code> directory houses our <em>Client Components</em>.</p>
 <p>The naming convention for this directory is
 <code>[name of component].component.tsx</code>. e.g. <code>sidebar.component.tsx</code></p>
@@ -789,14 +789,14 @@ All components in the <code>app</code> directory are <em>Server Components</em> 
 
 </pre>
 
-<h4 id="config-directory">Config Directory</h4>
+<h4 id="config-directory">Config Directory<a class="headerlink" href="#config-directory" title="Permanent link">&para;</a></h4>
 <p>The naming convention for this directory is
 <code>[name of hook].tsx</code>. e.g. <code>usePermision</code></p>
 <pre>
 
 </pre>
 
-<h4 id="hooks-directory">Hooks Directory</h4>
+<h4 id="hooks-directory">Hooks Directory<a class="headerlink" href="#hooks-directory" title="Permanent link">&para;</a></h4>
 <p>The <code>hooks</code> directory is where we store the custom hooks we create for our projects.</p>
 <p>The naming convention for this directory is
 <code>[name of hook].tsx</code>. e.g. <code>usePermision.tsx</code></p>
@@ -804,7 +804,7 @@ All components in the <code>app</code> directory are <em>Server Components</em> 
 
 </pre>
 
-<h4 id="interfaces-directory">Interfaces Directory</h4>
+<h4 id="interfaces-directory">Interfaces Directory<a class="headerlink" href="#interfaces-directory" title="Permanent link">&para;</a></h4>
 <p>The <code>interfaces</code> directory is where we store our interfaces.</p>
 <p>file: <code>src/interfaces/posts.interface.tsx</code></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">export</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="nx">IPost</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -831,7 +831,7 @@ All components in the <code>app</code> directory are <em>Server Components</em> 
 
 </pre>
 
-<h4 id="services-directory">Services Directory</h4>
+<h4 id="services-directory">Services Directory<a class="headerlink" href="#services-directory" title="Permanent link">&para;</a></h4>
 <p>The <code>services</code> directory is where we store our services. A service in this context is a class or group of methods that abstractify interaction with external libraries/API's.</p>
 <p>An example of a service method is:</p>
 <p>file: <code>post.service.ts</code></p>
@@ -848,7 +848,7 @@ All components in the <code>app</code> directory are <em>Server Components</em> 
 
 </pre>
 
-<h4 id="utils-directory">Utils Directory</h4>
+<h4 id="utils-directory">Utils Directory<a class="headerlink" href="#utils-directory" title="Permanent link">&para;</a></h4>
 <p>The utils directory houses any helper methods that want to create but don't belong to a particular category.</p>
 <p>The naming convention for this directory is
 <code>[name of util].util.ts</code>. e.g. <code>user.util.ts, transfer.util.ts</code></p>

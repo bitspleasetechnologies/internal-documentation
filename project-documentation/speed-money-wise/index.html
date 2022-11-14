@@ -445,6 +445,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#data-fetching" class="md-nav__link">
+    Data Fetching
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -621,6 +628,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#data-fetching" class="md-nav__link">
+    Data Fetching
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -673,34 +687,34 @@
                   
 
 
-<h1 id="speed-money-wise-portal">Speed Money Wise Portal</h1>
-<h2 id="what-is-the-project">What is the project?</h2>
+<h1 id="speed-money-wise-portal">Speed Money Wise Portal<a class="headerlink" href="#speed-money-wise-portal" title="Permanent link">&para;</a></h1>
+<h2 id="what-is-the-project">What is the project?<a class="headerlink" href="#what-is-the-project" title="Permanent link">&para;</a></h2>
 <p>Speed Money Wise is a multinational financial services company, that enables clients to transfer money across the world almost instantaneously.</p>
 <p>The company currently uses WhatsApp to keep track of transactions made which has proven to be very inefficient.</p>
 <p>The solution we shall provide is a web portal that allows the company to efficiently administrate its transactions and keep track of the customers involved in those transactions.</p>
 <p>Next to those core functionalities, the system will also have settings that allow the administrator <strong>(superuser)</strong> to input supporting data for the transaction creation process and to manage the access control of the users in the system.</p>
 <p><img alt="Figure 1: High-Level Overview Of Process Flow" src="../../images/projects/speed-money-wise/Speed_Money_Wise_Flow.png" /></p>
 <p>Figure 1: High-Level Overview Of Process Flow</p>
-<h2 id="how-will-we-build-the-project">How will we build the project?</h2>
+<h2 id="how-will-we-build-the-project">How will we build the project?<a class="headerlink" href="#how-will-we-build-the-project" title="Permanent link">&para;</a></h2>
 <p>The infrastructure of this project is split into 2 parts, the frontend, and the backend.</p>
-<p><img alt="Figure 2: High-Level Overview Of Project Infrastructure." src="../../images/projects/speed-money-wise/Speed_Money_Wise_Infra.png" /></p>
+<p><img alt="Figure 2: High-Level Overview Of Project Infrastructure." src="../../images/projects/speed-money-wise/Speed_Money_Wise_Infra.jpg" /></p>
 <p>Figure 2: High-Level Overview Of Project Infrastructure.</p>
-<h3 id="the-frontend">The Frontend</h3>
+<h3 id="the-frontend">The Frontend<a class="headerlink" href="#the-frontend" title="Permanent link">&para;</a></h3>
 <p>To build the frontend for this project we will be using the Typescript version of <a href="https://nextjs.org/blog/next-13">Next.js</a> 13 in combination with <a href="https://tailwindcss.com/">TailwindCSS</a>. Furthermore, we will be using various other packages to aid in certain aspects of the project.</p>
-<h4 id="authentication">Authentication</h4>
+<h4 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h4>
 <p>For the authentication part of our frontend application, we will utilize <a href="https://next-auth.js.org/">NextAuth</a> which provides us with an easy way to authenticate our users and maintain a user session across our application. The provider we’ll be using is the <a href="https://next-auth.js.org/providers/credentials"><code>CredentialsProvider</code></a>.</p>
 <p>The authentication system we will implement is a combination of access tokens and refresh tokens. The user will log into the system with their credentials and receive an access token and a refresh token.</p>
 <p>The access token will expire in a short amount of time which will cause the client to request a new token with the refresh token.</p>
 <p><img alt="Figure 3:  Authentication Process" src="../../images/projects/speed-money-wise/Token_Authentication_Flow.png" /></p>
 <p>Figure 3: Authentication Process</p>
-<h4 id="authorization">Authorization</h4>
+<h4 id="authorization">Authorization<a class="headerlink" href="#authorization" title="Permanent link">&para;</a></h4>
 <div class="admonition note">
 <p class="admonition-title">There is a <a href="https://gist.github.com/N3RDCLASH/576d92a71d605b824b5ebbb4527bad09">usePermission hook example</a></p>
 </div>
-<h4 id="user-interface">User Interface</h4>
+<h4 id="user-interface">User Interface<a class="headerlink" href="#user-interface" title="Permanent link">&para;</a></h4>
 <p>The user interface of this application will be styled with TailwindCSS. The project will consist of a combination of completely <strong>custom-built components</strong> and some <strong>pre-built functional components</strong> that will be styled using tailwind.</p>
 <p>The libraries we'll be using for the "headless" components are <a href="https://headlessui.com/">Headless UI</a> and <a href="https://tanstack.com/">Tanstack Table</a>.</p>
-<h5 id="components">Components</h5>
+<h5 id="components">Components<a class="headerlink" href="#components" title="Permanent link">&para;</a></h5>
 <p>The components that will have to be built for this project are:</p>
 <ul>
 <li>Sidebar</li>
@@ -710,7 +724,7 @@
 <li>Etc...</li>
 </ul>
 <p>The goal is to reuse build components we can reuse many times within this project but also future projects.</p>
-<h6 id="sidebar">Sidebar</h6>
+<h6 id="sidebar">Sidebar<a class="headerlink" href="#sidebar" title="Permanent link">&para;</a></h6>
 <p>The sidebar component will be the main navigation component for this portal.</p>
 <p>The requirements for this component are:</p>
 <ul>
@@ -718,7 +732,7 @@
 <li>The sidebar will generate its sidebar item based on the objects in the array.</li>
 <li>The sidebar will use a permissions hook to determine if the user has the permissions to visit that route and will render based on that condition.</li>
 </ul>
-<h6 id="client-form">Client Form</h6>
+<h6 id="client-form">Client Form<a class="headerlink" href="#client-form" title="Permanent link">&para;</a></h6>
 <p>The client form will be used to register client information. The form will be used 3 times in the application:</p>
 <ol>
 <li>To record sender information when registering a transaction.</li>
@@ -730,20 +744,73 @@
 <li>The form should be able to query our api to check if the user who's name were typing is already in our records and then autofill its fields if they exist.</li>
 <li>The form should have a prop that can enable or disable the autofill capability.</li>
 </ul>
-<h6 id="table">Table</h6>
+<h6 id="table">Table<a class="headerlink" href="#table" title="Permanent link">&para;</a></h6>
 <p>The table can be used to display various amounts of information. For the table component we will use Tanstack Tables so we don't have to implenent table functionility from scratch.</p>
-<h6 id="button">Button</h6>
-<h4 id="state-management">State Management</h4>
+<h6 id="button">Button<a class="headerlink" href="#button" title="Permanent link">&para;</a></h6>
+<h4 id="state-management">State Management<a class="headerlink" href="#state-management" title="Permanent link">&para;</a></h4>
 <div class="admonition note">
 <p class="admonition-title">Check out a helpful Zustand tutorial <a href="https://www.youtube.com/watch?v=KCr-UNsM3vA">here</a>.</p>
 </div>
-<p>The state management solution we will be using is <a href="https://docs.pmnd.rs/zustand/getting-started/introduction">Zustand</a>. Zustand is very simple and straightforward state management solution.</p>
-<h3 id="the-backend">The Backend</h3>
+<p>The state management solution we will be using is <a href="https://docs.pmnd.rs/zustand/getting-started/introduction"><code>zustand</code></a>. Zustand is very simple and straightforward state management solution.</p>
+<h4 id="data-fetching">Data Fetching<a class="headerlink" href="#data-fetching" title="Permanent link">&para;</a></h4>
+<p>Our data fetching stack will consist out of two libraries <a href="https://www.npmjs.com/package/axios"><code>axios</code></a> and <a href="https://www.npmjs.com/package/react-query"><code>react-query</code></a>. <code>axios</code> is a http client that simplifies the concept of making http requests.<code>react-query</code> is a set of custom hooks that makes fetching, caching, and updating asynchronous or server state in React easy.</p>
+<p>An example of how these two libraries will work together in our project.</p>
+<p><code>axios</code> is being used to get data from the <code>jsonplaceholder</code> API.</p>
+<p>file: <code>src/services/post.service.ts</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">axios</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;axios&quot;</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">getPosts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">axios</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;https://jsonplaceholder.typicode.com/posts&quot;</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>file: <code>src/app/query-example/page.tsx</code></p>
+<p><code>react-query</code> is used to implement gather the data and the request completion status easily.</p>
+<p>For more information check out the <code>react-query</code> <a href="https://react-query-v3.tanstack.com/">documentation</a></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&#39;use client&#39;;
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>import { getPosts } from &quot;@services/example.service&quot;
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>import { useQuery } from &quot;react-query&quot;
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>import ClockLoader from &quot;react-spinners/ClockLoader&quot;;
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>const TestPage = () =&gt; {
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    const { data: posts, isLoading } = useQuery&lt;IPost[]&gt;(&quot;posts&quot;, getPosts)
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    return &lt;div className=&quot;flex flex-col gap-4 items-center justify-center&quot;&gt;
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        &lt;h1 className=&quot;text-2xl&quot;&gt;React Query Example&lt;/h1&gt;
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>        {
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>            &lt;ClockLoader
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>                color=&quot;#fff&quot;
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>                loading={isLoading}
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>                size={90}
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>                aria-label=&quot;Loading Spinner&quot;
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>                data-testid=&quot;loader&quot;
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>            /&gt;}
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>        &lt;div className=&quot;grid grid-cols-4 grid-flow-row gap-3&quot;&gt;
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>            {posts &amp;&amp; posts.map(({ id, title, body, userId }) =&gt; &lt;div key={id} className=&quot;bg-green-500 flex flex-col p-4 gap-6&quot;&gt;
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>                &lt;span className=&quot;text-xl&quot;&gt;
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>                    {title}
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>                &lt;/span&gt;
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>                &lt;span&gt;
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>                    Posted By User: {userId}
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>                &lt;/span&gt;
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>                &lt;span&gt;
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>                    {body}
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>                &lt;/span&gt;
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>            &lt;/div&gt;)}
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>        &lt;/div&gt;
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>    &lt;/div&gt;
+</code></pre></div>
+<pre>
+
+</pre>
+
+<h3 id="the-backend">The Backend<a class="headerlink" href="#the-backend" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
 <p class="admonition-title">when adding a custom fee the selected fee_id should be null in the transactions body</p>
 </div>
-<h4 id="authentication_1">Authentication</h4>
-<h4 id="authorization_1">Authorization</h4>
+<h4 id="authentication_1">Authentication<a class="headerlink" href="#authentication_1" title="Permanent link">&para;</a></h4>
+<h4 id="authorization_1">Authorization<a class="headerlink" href="#authorization_1" title="Permanent link">&para;</a></h4>
 <p>TODO: write these doc sections</p>
 <p><strong>*note: sender and receiver forms should autofill or make a new transfer record</strong></p>
 
