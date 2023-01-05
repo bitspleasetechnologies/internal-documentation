@@ -1,6 +1,9 @@
 site_name: Bits Please Technologies N.V. - Dev Docs
 nav:
   - Home: index.md
+  - Internal Pipelines:
+      - Cold Calls: internal-pipelines/cold-calls.md
+      - Cold Emails: internal-pipelines/cold-emails.md
   - Project Starters:
       - NextJS Starter: project-setup/nextjs-starter.md
       - NestJS Starter: project-setup/nestjs-starter.md
